@@ -10,7 +10,7 @@ def index(request):
 
 
 def flight(request, flight_id):
-    flight = Flight.object.get(id=flight_id)
+    flight = Flight.objects.get(id=flight_id)
     return render(request, "flights/flight.html", {
         "flight": flight
     })
