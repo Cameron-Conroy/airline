@@ -1,5 +1,5 @@
 from django.urls import path
-from django.urls.resolvers import RoutePattern
+from django.urls import path
 from . import views
 
 urlpatterns = [
