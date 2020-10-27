@@ -76,17 +76,9 @@ WSGI_APPLICATION = 'airline.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'TrainingPlatform',
-        'USER': 'TAITraining',
-        'PASSWORD': 'T@iT@i01',
-        'HOST': '184.175.95.91',
-        'PORT':'1433',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        }
-        
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 
