@@ -1,4 +1,3 @@
-# does this work
 """
 Django settings for airline project.
 
