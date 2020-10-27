@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'a)@a1ucj5_-&a#u2!krs6=395828qejh!i5^+%i5)w%*a4y1vy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['184.175.95.91']
 
 
 # Application definition
@@ -76,11 +76,20 @@ WSGI_APPLICATION = 'airline.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+     'default': {
+        'ENGINE': 'sql_server.pyodbc',
+        'NAME': 'TrainingPlatform',
+        'USER': 'TAITraining',
+        'PASSWORD': 'T@iT@i01',
+        'HOST': '184.175.95.91',
+        'PORT':'1433',
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        }
+        
     }
 }
+
 
 
 # Password validation
